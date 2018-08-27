@@ -2,13 +2,27 @@
   "name": "runformance",
   "version": "1.0.0",
   "description": "",
-  "main": "js/main.js",
+  "main": "app/js/main.js",
   "scripts": {
-    "start": "electron  ."
+    "start": "electron  .",
+    "postinstall": "electron-builder install-app-deps",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
   },
-  "author": "Adrien Richard",
+  "author": "Adrien R.",
   "license": "MIT",
   "devDependencies": {
-    "electron": "^2.0.8"
+    "electron": "^2.0.8",
+    "electron-builder": "^20.28.2"
+  },
+  "dependencies": {
+    "sqlite3": "^4.0.2",
+    "yarn": "^1.9.4"
+  },
+  "build": {
+    "appId": "com.runformance.app",
+    "win": {
+      "target ": "portable"
+    }
   }
 }
