@@ -1,23 +1,10 @@
+//#region Const
 const {
   app,
   BrowserWindow
-} = require('electron')
+} = require('electron');
 
-
-
-const path = require('path')
-const dbFilePath = path.resolve(__dirname, '../userdata/database.db')
-console.log(dbFilePath)
-
-const sqlite3 = require('sqlite3')
-//connect to the database http://www.sqlitetutorial.net/sqlite-nodejs/connect/
-let db = new sqlite3.Database(dbFilePath, sqlite3.OPEN_READWRITE, (err) => {
-  if (err) {
-    return console.error(err.message);yarn add electron-builder --dev
-  }
-  console.log('Connected to the main SQlite database.');
-});
-
+const db = require('app/js/DbConnect.js');
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -69,6 +56,3 @@ app.on('activate', () => {
     createWindow()
   }
 })
-
-// In this file you can include the rest of your app's specific main process
-// code. You can also put them in separate files and require them here.
