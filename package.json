@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "sqlite3": "^4.0.2",
-    "yarn": "^1.9.4"
+    "yarn": "^1.17.3"
   },
   "build": {
     "appId": "com.runformance.app",
