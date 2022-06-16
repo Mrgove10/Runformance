@@ -13,7 +13,7 @@
   "author": "Adrien R.",
   "license": "MIT",
   "devDependencies": {
-    "electron": "^2.0.8",
+    "electron": "^15.5.5",
     "electron-builder": "^20.28.2"
   },
   "dependencies": {
